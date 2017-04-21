@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZUc-6f-qDr">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Black.ttf">
+            <string>Roboto-Black</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Header View Controller-->
+        <scene sceneID="Eji-AZ-47y">
+            <objects>
+                <viewController storyboardIdentifier="headerViewController." id="ZUc-6f-qDr" customClass="HeaderViewController" customModule="WeatherlyVersion3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ktG-jh-Gne"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nrg-g4-5th"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UIl-Y6-LaT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JqT-fn-Gcz">
+                                <rect key="frame" x="319" y="25" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9iC-oh-q2b"/>
+                                    <constraint firstAttribute="width" constant="40" id="DFA-YS-g9g"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="SearchIcon"/>
+                                <connections>
+                                    <action selector="searchButtonTapped:" destination="ZUc-6f-qDr" eventType="touchUpInside" id="T0Q-vS-4eE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8E8-rR-PDn">
+                                <rect key="frame" x="36" y="28" width="275" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="275" id="ajy-ht-mzo"/>
+                                    <constraint firstAttribute="height" constant="32" id="sqc-PR-xs6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Black" family="Roboto" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8E8-rR-PDn" firstAttribute="top" secondItem="ktG-jh-Gne" secondAttribute="bottom" constant="8" id="8nw-MH-izZ"/>
+                            <constraint firstItem="JqT-fn-Gcz" firstAttribute="trailing" secondItem="UIl-Y6-LaT" secondAttribute="trailingMargin" id="Dnb-Zx-UJD"/>
+                            <constraint firstItem="Nrg-g4-5th" firstAttribute="top" secondItem="JqT-fn-Gcz" secondAttribute="bottom" constant="15" id="KOi-8J-LiO"/>
+                            <constraint firstItem="8E8-rR-PDn" firstAttribute="leading" secondItem="UIl-Y6-LaT" secondAttribute="leadingMargin" constant="20" id="QhA-sP-8iI"/>
+                            <constraint firstItem="JqT-fn-Gcz" firstAttribute="top" secondItem="ktG-jh-Gne" secondAttribute="bottom" constant="5" id="Yf3-hw-05v"/>
+                            <constraint firstItem="Nrg-g4-5th" firstAttribute="top" secondItem="8E8-rR-PDn" secondAttribute="bottom" constant="20" id="cvx-Gl-jUe"/>
+                            <constraint firstItem="JqT-fn-Gcz" firstAttribute="leading" secondItem="8E8-rR-PDn" secondAttribute="trailing" constant="8" id="wMK-TK-58R"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="80"/>
+                    <connections>
+                        <outlet property="cityLabel" destination="8E8-rR-PDn" id="mGg-tn-64R"/>
+                        <outlet property="searchButton" destination="JqT-fn-Gcz" id="V2Y-FN-XKl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yq2-sJ-WAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="216.80000000000001" y="-140.32983508245877"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="SearchIcon" width="40" height="40"/>
+    </resources>
+</document>

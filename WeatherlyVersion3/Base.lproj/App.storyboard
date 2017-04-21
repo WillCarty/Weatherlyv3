@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--App View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AppViewController" customModule="WeatherlyVersion3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="twM-Az-HZf" userLabel="weathercontainer">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="667" id="XC7-h1-gvC"/>
+                                    <constraint firstAttribute="width" constant="375" id="s3I-2v-hj4"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="ygE-XU-ib8" kind="embed" id="L1t-s6-gef"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Frc-mI-Kx6" userLabel="weeklyContainer">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="7eM-Nq-WmP"/>
+                                    <constraint firstAttribute="height" constant="667" id="esc-KS-A1M"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="Gxs-C5-RJd" kind="embed" id="6NI-at-e48"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JL8-GI-Ea7" userLabel="settingsContainer">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="667" id="8Y6-yW-FTZ"/>
+                                    <constraint firstAttribute="width" constant="375" id="gFt-dP-giC"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="BR4-By-KmM" kind="embed" id="DJe-1C-ken"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gVX-sc-prc" userLabel="mapContainer">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="Npr-5E-z1Y"/>
+                                    <constraint firstAttribute="height" constant="667" id="nUm-r6-udl"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="HHs-qf-bdV" kind="embed" id="pFG-AK-PFo"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TQr-nO-r6U" userLabel="SearchContainer">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="iAg-Gp-Aw8"/>
+                                    <constraint firstAttribute="height" constant="80" id="iX0-1r-Uys"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="reg-Xz-u23" kind="embed" identifier="search" id="snr-xq-8CC"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6eg-VZ-22C" userLabel="menuContainer">
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="37r-qU-GEW"/>
+                                    <constraint firstAttribute="height" constant="80" id="PU1-FI-3Us"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="zWO-VA-SWs" kind="embed" id="Uce-YU-ZjV"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dg8-1J-gUe" userLabel="headerContainer">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="5EQ-bO-av8"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="9ez-Yq-HdA"/>
+                                    <constraint firstAttribute="width" constant="375" id="TmM-yl-cnN"/>
+                                    <constraint firstAttribute="height" constant="80" id="zT2-Qa-Jho"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="wet-Yx-z7p" kind="embed" id="ef2-gn-ruY"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gVX-sc-prc" secondAttribute="trailing" id="2Tq-2E-P0a"/>
+                            <constraint firstItem="JL8-GI-Ea7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2nH-jQ-b73"/>
+                            <constraint firstItem="Frc-mI-Kx6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="347-NJ-LJy"/>
+                            <constraint firstAttribute="trailing" secondItem="Frc-mI-Kx6" secondAttribute="trailing" id="4aX-XC-PxN"/>
+                            <constraint firstAttribute="trailing" secondItem="JL8-GI-Ea7" secondAttribute="trailing" id="5lT-tX-wmp"/>
+                            <constraint firstAttribute="trailing" secondItem="Dg8-1J-gUe" secondAttribute="trailing" id="7GT-Nl-G0v"/>
+                            <constraint firstAttribute="trailing" secondItem="6eg-VZ-22C" secondAttribute="trailing" id="879-ss-m2f"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6eg-VZ-22C" secondAttribute="bottom" id="8fh-5N-2kB"/>
+                            <constraint firstItem="Dg8-1J-gUe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CB0-D2-hlf"/>
+                            <constraint firstAttribute="trailing" secondItem="twM-Az-HZf" secondAttribute="trailing" id="EW4-Ru-AzI"/>
+                            <constraint firstItem="twM-Az-HZf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="H3r-J0-BMo"/>
+                            <constraint firstItem="gVX-sc-prc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="JSI-qv-b3u"/>
+                            <constraint firstItem="Frc-mI-Kx6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Uiv-Bq-DAr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JL8-GI-Ea7" secondAttribute="bottom" id="bpV-zO-TBE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="twM-Az-HZf" secondAttribute="bottom" id="cd9-hP-Xxu"/>
+                            <constraint firstAttribute="trailing" secondItem="Dg8-1J-gUe" secondAttribute="trailing" id="iKD-Pt-GgS"/>
+                            <constraint firstItem="twM-Az-HZf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lc4-Fr-um4"/>
+                            <constraint firstAttribute="trailing" secondItem="TQr-nO-r6U" secondAttribute="trailing" id="mNL-Cz-d4x"/>
+                            <constraint firstItem="6eg-VZ-22C" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mOc-xm-Sv3"/>
+                            <constraint firstItem="Dg8-1J-gUe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="n9o-fq-cjB"/>
+                            <constraint firstItem="gVX-sc-prc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oKq-MR-t7R"/>
+                            <constraint firstItem="TQr-nO-r6U" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qfi-4c-E3w"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Frc-mI-Kx6" secondAttribute="bottom" id="s6a-dP-iwx"/>
+                            <constraint firstItem="TQr-nO-r6U" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sOs-cL-mJ9"/>
+                            <constraint firstItem="Dg8-1J-gUe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="srM-AH-QXv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gVX-sc-prc" secondAttribute="bottom" id="tLg-TT-OrF"/>
+                            <constraint firstItem="Dg8-1J-gUe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wbD-ic-WpF"/>
+                            <constraint firstItem="JL8-GI-Ea7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xis-uX-nfS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="headerContainer" destination="Dg8-1J-gUe" id="Awi-CH-HE1"/>
+                        <outlet property="headerHeightConstraint" destination="9ez-Yq-HdA" id="0ds-ps-eql"/>
+                        <outlet property="mapContainer" destination="gVX-sc-prc" id="Ivn-wz-SZr"/>
+                        <outlet property="menuContainer" destination="6eg-VZ-22C" id="05N-bQ-5hB"/>
+                        <outlet property="searchContainer" destination="TQr-nO-r6U" id="U2S-mQ-IeS"/>
+                        <outlet property="settingContainer" destination="JL8-GI-Ea7" id="gHg-b0-NIR"/>
+                        <outlet property="weatherContainer" destination="twM-Az-HZf" id="XRB-qq-ubz"/>
+                        <outlet property="weeklyContainer" destination="Frc-mI-Kx6" id="Jby-Ap-bLf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="129.98500749625188"/>
+        </scene>
+        <!--Header-->
+        <scene sceneID="N7a-ts-OVC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Header" id="wet-Yx-z7p" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j4B-cH-QL4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="676" y="168"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="MUb-tT-SAm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Map" id="HHs-qf-bdV" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s5k-Ez-bth" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="674" y="208"/>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="tni-pO-bhS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Menu" id="zWO-VA-SWs" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zBe-MF-cST" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="676" y="245"/>
+        </scene>
+        <!--Weather-->
+        <scene sceneID="1Vr-4g-S5f">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Weather" id="ygE-XU-ib8" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kSN-JO-8cQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="680" y="284"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="QoX-DR-06g">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Search" id="reg-Xz-u23" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tbu-vz-mu1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="687" y="318"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="toH-ve-EYh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" id="BR4-By-KmM" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hyd-8P-vac" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="694" y="354"/>
+        </scene>
+        <!--Weekly-->
+        <scene sceneID="Ioa-0g-oab">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Weekly" id="Gxs-C5-RJd" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mAk-c0-KBp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="688" y="390"/>
+        </scene>
+    </scenes>
+</document>

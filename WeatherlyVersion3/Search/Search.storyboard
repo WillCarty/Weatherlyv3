@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ikR-Du-7Xo">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="j8f-JA-UVb">
+            <objects>
+                <viewController id="ikR-Du-7Xo" customClass="SearchViewController" customModule="WeatherlyVersion3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wOh-e9-EDZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="O9P-c7-FFP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YOy-kc-pfH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fem-ur-SYg">
+                                <rect key="frame" x="11" y="20" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="LRd-td-TAH"/>
+                                    <constraint firstAttribute="height" constant="40" id="zBO-nX-XkU"/>
+                                </constraints>
+                                <state key="normal" image="SearchIcon"/>
+                                <connections>
+                                    <action selector="searchButtonTapped:" destination="ikR-Du-7Xo" eventType="touchUpInside" id="cOs-Cl-4zX"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XrA-5n-2xC">
+                                <rect key="frame" x="59" y="25" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Hdj-e0-yyZ"/>
+                                    <constraint firstAttribute="height" constant="30" id="jwr-vm-014"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7Q-GH-ssI">
+                                <rect key="frame" x="317" y="25" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="3UC-mb-zrl"/>
+                                    <constraint firstAttribute="height" constant="30" id="JmB-E8-euk"/>
+                                </constraints>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonTapped:" destination="ikR-Du-7Xo" eventType="touchUpInside" id="dJb-t8-cgJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdp-gN-7Ro">
+                                <rect key="frame" x="279" y="24" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="GDT-85-HE9"/>
+                                    <constraint firstAttribute="width" constant="30" id="jzW-u7-0bR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchClearButtonTapped:" destination="ikR-Du-7Xo" eventType="touchUpInside" id="xlp-H5-nYI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="A7Q-GH-ssI" firstAttribute="leading" secondItem="vdp-gN-7Ro" secondAttribute="trailing" constant="8" symbolic="YES" id="5QT-Af-3K6"/>
+                            <constraint firstItem="O9P-c7-FFP" firstAttribute="top" secondItem="A7Q-GH-ssI" secondAttribute="bottom" constant="25" id="CyI-Rq-DOC"/>
+                            <constraint firstItem="O9P-c7-FFP" firstAttribute="top" secondItem="vdp-gN-7Ro" secondAttribute="bottom" constant="26" id="DIX-Ew-2Kg"/>
+                            <constraint firstItem="XrA-5n-2xC" firstAttribute="leading" secondItem="Fem-ur-SYg" secondAttribute="trailing" constant="8" id="NHk-iC-tZs"/>
+                            <constraint firstItem="A7Q-GH-ssI" firstAttribute="leading" secondItem="XrA-5n-2xC" secondAttribute="trailing" constant="8" id="Poc-hY-GBd"/>
+                            <constraint firstItem="vdp-gN-7Ro" firstAttribute="top" secondItem="wOh-e9-EDZ" secondAttribute="bottom" constant="4" id="bJD-q5-o5w"/>
+                            <constraint firstItem="XrA-5n-2xC" firstAttribute="top" secondItem="wOh-e9-EDZ" secondAttribute="bottom" constant="5" id="h7O-sp-DX8"/>
+                            <constraint firstItem="Fem-ur-SYg" firstAttribute="top" secondItem="wOh-e9-EDZ" secondAttribute="bottom" id="hCe-zk-AeY"/>
+                            <constraint firstItem="A7Q-GH-ssI" firstAttribute="top" secondItem="wOh-e9-EDZ" secondAttribute="bottom" constant="5" id="hHY-L4-SX4"/>
+                            <constraint firstAttribute="trailing" secondItem="A7Q-GH-ssI" secondAttribute="trailing" constant="8" id="ola-1q-nbQ"/>
+                            <constraint firstItem="Fem-ur-SYg" firstAttribute="leading" secondItem="YOy-kc-pfH" secondAttribute="leading" constant="11" id="tbr-sS-AuC"/>
+                            <constraint firstItem="O9P-c7-FFP" firstAttribute="top" secondItem="XrA-5n-2xC" secondAttribute="bottom" constant="25" id="xr3-rB-LTj"/>
+                            <constraint firstItem="O9P-c7-FFP" firstAttribute="top" secondItem="Fem-ur-SYg" secondAttribute="bottom" constant="20" id="yfd-49-G8c"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="80"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="A7Q-GH-ssI" id="mu6-oi-v9a"/>
+                        <outlet property="searchButton" destination="Fem-ur-SYg" id="IgH-gd-2M5"/>
+                        <outlet property="searchClearButton" destination="vdp-gN-7Ro" id="1ZP-73-dtd"/>
+                        <outlet property="textField" destination="XrA-5n-2xC" id="3Eh-QT-NCz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZgH-P0-Xzw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-271.19999999999999" y="93.553223388305852"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="SearchIcon" width="40" height="40"/>
+    </resources>
+</document>

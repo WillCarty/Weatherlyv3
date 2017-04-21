@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MKH-OE-WDo">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Black.ttf">
+            <string>Roboto-Black</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Weekly View Controller-->
+        <scene sceneID="rbh-EL-Zhg">
+            <objects>
+                <viewController id="MKH-OE-WDo" customClass="WeeklyViewController" customModule="WeatherlyVersion3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TKW-FT-l9K"/>
+                        <viewControllerLayoutGuide type="bottom" id="46M-g7-swa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Xp-CN-DYg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oc6-zz-A0g">
+                                <rect key="frame" x="0.0" y="80" width="375" height="507"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="507" id="5Z6-cp-hsW"/>
+                                    <constraint firstAttribute="width" constant="375" id="llL-YE-H2G"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4XM-A6-fPZ">
+                                    <size key="itemSize" width="150" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dayCell" id="RJu-md-vpz" customClass="dayCell" customModule="WeatherlyVersion3" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gia-jN-J0H">
+                                                    <rect key="frame" x="50" y="40" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="cjH-Ol-MPs"/>
+                                                        <constraint firstAttribute="width" constant="50" id="oej-BF-r7i"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLE-Wl-yr4">
+                                                    <rect key="frame" x="0.0" y="121" width="150" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="5RM-nZ-OAL"/>
+                                                        <constraint firstAttribute="height" constant="21" id="pNr-cg-Aig"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Roboto-Black" family="Roboto" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSr-Lb-E2Q">
+                                                    <rect key="frame" x="0.0" y="8" width="150" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="K1B-R7-CoL"/>
+                                                        <constraint firstAttribute="height" constant="21" id="jB4-jQ-CUr"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Roboto-Black" family="Roboto" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hea-rI-y8B">
+                                                    <rect key="frame" x="0.0" y="98" width="150" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="lCl-0W-ICw"/>
+                                                        <constraint firstAttribute="width" constant="150" id="zgb-gc-hTV"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Roboto-Black" family="Roboto" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="jSr-Lb-E2Q" secondAttribute="trailing" id="0Bi-i8-ShF"/>
+                                            <constraint firstItem="pLE-Wl-yr4" firstAttribute="leading" secondItem="RJu-md-vpz" secondAttribute="leading" id="7dR-9H-KSm"/>
+                                            <constraint firstItem="jSr-Lb-E2Q" firstAttribute="leading" secondItem="RJu-md-vpz" secondAttribute="leading" id="Kff-gV-ASf"/>
+                                            <constraint firstItem="pLE-Wl-yr4" firstAttribute="top" secondItem="hea-rI-y8B" secondAttribute="bottom" constant="2" id="RB6-QG-l5o"/>
+                                            <constraint firstAttribute="trailing" secondItem="pLE-Wl-yr4" secondAttribute="trailing" id="VCX-3P-lCQ"/>
+                                            <constraint firstItem="hea-rI-y8B" firstAttribute="leading" secondItem="RJu-md-vpz" secondAttribute="leading" id="hta-8s-K22"/>
+                                            <constraint firstAttribute="trailing" secondItem="hea-rI-y8B" secondAttribute="trailing" id="iJn-0t-z46"/>
+                                            <constraint firstItem="jSr-Lb-E2Q" firstAttribute="top" secondItem="RJu-md-vpz" secondAttribute="top" constant="8" id="iLJ-7y-yv9"/>
+                                            <constraint firstItem="gia-jN-J0H" firstAttribute="top" secondItem="jSr-Lb-E2Q" secondAttribute="bottom" constant="11" id="jOp-Rp-uaB"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="gia-jN-J0H" secondAttribute="trailing" constant="42" id="rXy-qQ-NQG"/>
+                                            <constraint firstItem="hea-rI-y8B" firstAttribute="top" secondItem="gia-jN-J0H" secondAttribute="bottom" constant="8" id="ta7-Bl-E9u"/>
+                                            <constraint firstItem="gia-jN-J0H" firstAttribute="leading" secondItem="RJu-md-vpz" secondAttribute="leadingMargin" constant="42" id="xDd-hu-gkt"/>
+                                            <constraint firstAttribute="bottom" secondItem="pLE-Wl-yr4" secondAttribute="bottom" constant="8" id="zza-Qf-M0P"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="oc6-zz-A0g" secondAttribute="trailing" id="Hot-9F-1vD"/>
+                            <constraint firstItem="oc6-zz-A0g" firstAttribute="leading" secondItem="0Xp-CN-DYg" secondAttribute="leading" id="Hyc-Vv-vzR"/>
+                            <constraint firstItem="oc6-zz-A0g" firstAttribute="top" secondItem="TKW-FT-l9K" secondAttribute="bottom" constant="60" id="OIY-4G-fYe"/>
+                            <constraint firstItem="46M-g7-swa" firstAttribute="top" secondItem="oc6-zz-A0g" secondAttribute="bottom" constant="80" id="WgN-UJ-g0n"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bX1-7x-ff1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45.600000000000001" y="211.84407796101951"/>
+        </scene>
+    </scenes>
+</document>
